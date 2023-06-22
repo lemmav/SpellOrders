@@ -13,7 +13,7 @@ server = Flask(__name__)
 @server.route("/",methods=['POST', 'GET'])
 def main():
     if request.method == 'GET':       
-        options = ['Fortune Spell', 'Love Spell', 'Diarrhea Spell'] 
+        options = ['Fortune Spell', 'Love Spell'] 
         return render_template('main.html',options=options)
     return redirect(url_for('success'))
 
